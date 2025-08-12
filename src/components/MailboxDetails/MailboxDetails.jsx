@@ -9,7 +9,7 @@ const MailboxDetails = (props) => {
     return (
         <>
             <h2>Mailbox Details</h2>
-            <dl>
+            <dl class="mail-box">
                 <dt>Owner:</dt>
                 <dd>{selectedBox.boxOwner}</dd>
                 <dt>Box Size:</dt>
