@@ -5,16 +5,21 @@ const MailboxList = (props) => {
     return (
         <>
             <h2>Mailbox List</h2>
-            <ul>
-                {props.mailboxes.map((currentMail) => (
-                    <li key={currentMail._id}>
-                        <Link to={`/mailboxes/${currentMail._id}`}>
-                            {currentMail.boxOwner}
-                        </Link>
-                    </li>
-                ))}
-            </ul >
-
+            <div className="mailbox-container">
+                <ul>
+                    {props.mailboxes.map((currentMail) => (
+                        <div key={currentMail._id} className="square-box">
+                           <p> Owner :  
+                            <Link to={`/mailboxes/${currentMail._id}`}>
+                              {currentMail.boxOwner}
+                            </Link> 
+                            </p>
+                            <p> Box Number : {currentMail._id} </p> 
+                            <p> Box Size: {currentMail.boxSize} </p>
+                        </div>
+                    ))}
+                </ul >
+            </div>
 
         </>
     )
