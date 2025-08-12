@@ -4,6 +4,9 @@ import NavBar from "./components/NavBar/NavBar";
 import { useState } from "react";
 
 const App = () => {
+
+  const [mailboxes, setMailboxes] = useState([]);
+
   return (
   <>
   <NavBar />
