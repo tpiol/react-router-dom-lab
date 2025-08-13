@@ -9,6 +9,7 @@ const MailboxDetails = (props) => {
     return (
         <>
             <h2>Mailbox Details</h2>
+           {selectedBox ?  
             <dl>
                 <dt>Box Number:</dt>
                 <dd>{selectedBox._id}</dd>
@@ -17,6 +18,8 @@ const MailboxDetails = (props) => {
                 <dt>Box Size:</dt>
                 <dd>{selectedBox.boxSize}</dd>
             </dl>
+
+           : <h2>Mailbox not found!</h2>}
         </>
     )
 }
